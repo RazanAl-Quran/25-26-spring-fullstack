@@ -102,3 +102,28 @@ button.addEventListener("click", () => {
 // ❌ Object methods (unless nested inside a normal function).
 // ❌ Event listeners if you need this to refer to the element.
   
+
+
+
+// more about arrow functions 
+const add = (a, b) => {
+  return a + b;
+};
+
+// If the function has only one expressiona (one line), you can remove:
+// { }
+// return
+
+const add4 = (a, b) => a + b;
+// 👉 This is called implicit return
+
+// If there’s only one parameter, you can remove parentheses:
+const double = x => x * 2;
+
+
+// Common Mistake
+const getUser = () => { name: "Razan" };
+// 👉 JS thinks {} is a block, not an object.
+
+// ✅ Correct way:
+const getUser2 = () => ({ name: "Razan" });
